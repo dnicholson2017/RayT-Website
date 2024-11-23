@@ -96,9 +96,6 @@ const Portfolio = () => {
                     <a href={item.image} title={item.title} className="glightbox preview-link">
                       <i className="bi bi-zoom-in"></i>
                     </a>
-                    <a href="portfolio-details.html" title="More Details" className="details-link">
-                      <i className="bi bi-link-45deg"></i>
-                    </a>
                   </div>
                 </div>
               ))}

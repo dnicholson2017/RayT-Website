@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './custom-swiper.css';
+import './styles/custom-swiper.css';
 
 
 
