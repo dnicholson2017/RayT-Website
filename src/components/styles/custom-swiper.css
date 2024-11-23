@@ -1,0 +1,26 @@
+.custom-swiper {
+    text-align: center;
+  }
+  
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .bullet.active {
+    background-color: #34b7a7;
+  }
+  
+  .bullet:hover {
+    background-color: #2a8f81;
+  }

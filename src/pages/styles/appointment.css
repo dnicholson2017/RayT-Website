@@ -1,0 +1,31 @@
+/* Styling for the overall container */
+.appointment-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Light background color */
+}
+
+/* Header overlay styling */
+.header-overlay {
+
+    text-align: right;
+    background-color: #34b7a7; /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Adjust iframe to prevent scrollbars and fit content height */
+.appointment-iframe {
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add slight shadow to iframe */
+    padding-bottom: 20px;
+}

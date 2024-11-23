@@ -1,42 +1,344 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+/* Make sure to set a minimum height for the hero section so it fills the screen */
+.hero {
+  position: relative;
+  background-image: url('./assets/home-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Hero content styles */
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
   padding: 2rem;
+  z-index: 2;
+}
+
+/* Title and text styles */
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Incomplete rectangle (three sides) */
+.hero-content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  border: 3px solid white;
+  border-top: none; /* Remove top side */
+  border-right: none; /* Remove right side */
+  border-left: none; /* Remove left side */
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Behind text */
+}
+
+/* Make the design responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem; /* Smaller font on mobile */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Smaller text on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content::before {
+    width: 90%; /* Adjust the rectangle size on smaller screens */
+    height: 70%;
+  }
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  background-color: #f9f9f9;
+}
+
+/* Circular Portrait */
+.portrait-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.portrait {
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  border-radius: 50%; /* Circular shape */
+  border: 4px solid #ddd;
+  object-fit: cover; /* Ensures the image fits inside the circle */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Content boxes */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 2rem;
+  width: 90%; /* Make content responsive */
+  max-width: 1200px; /* Prevent it from being too wide */
+}
+
+.about-box {
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Mission Box */
+.about-mission {
+  background-color: #e9f5f5;
+  color: #333;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Testimonial Box */
+.about-testimonial {
+  background-image: url('./assets/home-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr; /* Stack the boxes on small screens */
+    gap: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .portrait {
+    width: 120px; /* Adjust the size of the portrait */
+    height: 120px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Services Section */
+.services-section {
+  padding: 2rem 0;
+}
+
+.services-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.service-box {
+  flex: 1;
+  height: 300px; /* Slightly taller than the about section boxes */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .services-row {
+    flex-direction: column;
+  }
+
+  .service-box {
+    margin-bottom: 1rem;
+    height: 250px; /* Adjust for smaller screens */
   }
 }
 
-.card {
-  padding: 2em;
+/* Services Section */
+.service-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 300px; /* Ensure all boxes are the same size */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1rem;
+  transition: transform 0.3s ease;
 }
 
-.read-the-docs {
-  color: #888;
+/* Remove grayish background behind text */
+.service-title,
+.arrow-icon {
+  background: none; /* No background */
+  color: #fff; /* Text and icon are white */
+}
+
+/* Hover shading */
+.service-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0); /* Initially transparent */
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+.service-box:hover::after {
+  background-color: rgba(255, 0, 0, 0.5); /* 50% transparent red */
+}
+
+/* Text styling */
+.service-title {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 2; /* Above the overlay */
+  align-self: flex-end;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Arrow icon */
+.arrow-icon {
+  position: relative;
+  font-size: 2rem;
+  z-index: 2; /* Above the overlay */
+  align-self: flex-end;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover scale effect */
+.service-box:hover .service-title,
+.service-box:hover .arrow-icon {
+  transform: scale(1.2); /* Scale up on hover */
+}
+
+/* Flex spacing for the title and arrow */
+.service-box-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.contact-section {
+  padding: 4rem 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+/* Center the company logo and make it larger */
+.company-logo {
+  display: block;
+  margin: 0 auto;
+  width: 200px; /* Adjust the size of the logo */
+  height: auto; /* Keep the aspect ratio */
+}
+
+/* Make the label text (Address, Phone, Email) font weight 500, font size 22px */
+.contact-label {
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 5px; /* Space between label and information */
+}
+  
+/* Style the actual contact information text */
+.contact-info-text {
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 10px; /* Add space between different contact info lines */
+}
+
+/* Add line breaks for better structure */
+address p {
+  line-height: 1.5;
+}
+
+.php-email-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.php-email-form .form-control {
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.php-email-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.php-email-form button:hover {
+  background-color: #0056b3;
+}
+
+.loading,
+.error-message,
+.sent-message {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.php-email-form button[type=submit] {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.php-email-form button[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }

@@ -1,0 +1,25 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width for centering */
+    padding-bottom: 60px;
+  }
+  
+  .schedule-appointment-button {
+    background-color: #34b7a7;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding: 16px 24px;
+    width: auto;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .schedule-appointment-button:hover {
+    background-color: #2a8f81; /* Darker shade for hover effect */
+  }
+  
