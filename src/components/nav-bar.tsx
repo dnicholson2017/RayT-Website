@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import './styles/nav-bar.css';
 import { Link } from "react-router-dom";
 import 'bootstrap-icons/font/bootstrap-icons.css';

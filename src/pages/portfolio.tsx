@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./styles/portfolio.css";
 import image1 from "../assets/img/masonry-portfolio-1.jpg";
 import image2 from "../assets/img/masonry-portfolio-2.jpg";

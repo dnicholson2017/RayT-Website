@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import NavComponent from "../components/nav-bar";
 import Footer from "../components/footer";
 import './styles/Appointment.css'; // Assuming you have custom CSS for this component
