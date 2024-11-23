@@ -1,10 +1,10 @@
 import React from 'react';
-import './about-page.css';
-import NavComponent from './nav-bar';
-import Footer from './footer';
+import './styles/about-page.css';
+import NavComponent from "../components/nav-bar";
+import Footer from "../components/footer";
+import ScheduleAppointmentButton from "../components/schedule-button";
 import homeHero from '../assets/home-hero.jpg';
 import CustomSwiper from './custom-swiper';
-import ScheduleAppointmentButton from './schedule-button';
 
 const AboutPage = () => {
   return (

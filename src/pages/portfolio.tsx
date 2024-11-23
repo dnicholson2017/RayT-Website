@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import NavComponent from "./nav-bar";
-import Footer from "./footer";
-import "./portfolio.css";
+import "./styles/portfolio.css";
 import image1 from "../assets/img/masonry-portfolio-1.jpg";
 import image2 from "../assets/img/masonry-portfolio-2.jpg";
 import image3 from "../assets/img/masonry-portfolio-3.jpg";
@@ -13,8 +11,9 @@ import image8 from "../assets/img/masonry-portfolio-8.jpg";
 import image9 from "../assets/img/masonry-portfolio-9.jpg";
 import GLightbox from "glightbox";
 import "glightbox/dist/css/glightbox.css";
-import ScheduleAppointmentButton from './schedule-button';
-
+import NavComponent from "../components/nav-bar";
+import Footer from "../components/footer";
+import ScheduleAppointmentButton from "../components/schedule-button";
 
 
 const Portfolio = () => {

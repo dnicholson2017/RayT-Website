@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import NavComponent from "./nav-bar";
-import Footer from "./footer";
-import './Appointment.css'; // Assuming you have custom CSS for this component
+import NavComponent from "../components/nav-bar";
+import Footer from "../components/footer";
+import './styles/Appointment.css'; // Assuming you have custom CSS for this component
 
 const Appointment = () => {
     const [iframeHeight, setIframeHeight] = useState(959); // Default height of the iframe

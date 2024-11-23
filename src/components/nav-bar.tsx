@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './nav-bar.css';
+import './styles/nav-bar.css';
 import { Link } from "react-router-dom";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 

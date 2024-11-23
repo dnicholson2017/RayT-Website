@@ -1,8 +1,8 @@
 import React from "react";
-import './contact.css';
-import NavComponent from "./nav-bar";
-import Footer from "./footer";
-import ScheduleAppointmentButton from './schedule-button';
+import './styles/contact.css';
+import NavComponent from "../components/nav-bar";
+import Footer from "../components/footer";
+import ScheduleAppointmentButton from "../components/schedule-button";
 import { useState } from "react";
 import emailjs from "emailjs-com"; // Install using npm install emailjs-com
 import RecaptchaComponent from "./recaptcha";

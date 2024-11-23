@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import "./schedule-button.css";
+import "./styles/schedule-button.css";
 
 const ScheduleAppointmentButton = () => {
   const navigate = useNavigate();

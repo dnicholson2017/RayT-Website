@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import './services.css';
+import './styles/services.css';
 import servicesData from '../data/services-data.json'
-import NavComponent from "./nav-bar";
-import Footer from "./footer";
-import ScheduleAppointmentButton from './schedule-button';
+import NavComponent from "../components/nav-bar";
+import Footer from "../components/footer";
+import ScheduleAppointmentButton from "../components/schedule-button";
 
 
 const Services = () => {
