@@ -4,7 +4,7 @@ import NavComponent from "../components/nav-bar";
 import Footer from "../components/footer";
 import ScheduleAppointmentButton from "../components/schedule-button";
 import homeHero from '../assets/home-hero.jpg';
-import CustomSwiper from './custom-swiper';
+import CustomSwiper from '../components/custom-swiper';
 
 const AboutPage = () => {
   return (
