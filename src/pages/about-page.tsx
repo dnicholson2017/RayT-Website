@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './styles/about-page.css';
 import NavComponent from "../components/nav-bar";
 import Footer from "../components/footer";

@@ -1,6 +1,11 @@
 import ReCAPTCHA from "react-google-recaptcha";
 
 const RecaptchaComponent = ({ captchaValid, handleCaptchaChange }: { captchaValid: boolean, handleCaptchaChange: (value: string | null) => void }) => {
+    
+    if (captchaValid === false) {
+        console.log("Captcha is not valid");
+    }
+    
     return (
         <div className="recaptcha-container">
             <ReCAPTCHA
